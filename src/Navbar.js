@@ -23,7 +23,7 @@ function Navbar() {
         {/* Logo */}
         <Link to="/" className="flex items-center z-50">
           <div className="bg-gradient-to-br from-taxi-yellow to-yellow-600 px-3 py-2 rounded-md shadow-md">
-            <img src="https://th.bing.com/th/id/OIP.M_lte6VffTvK_QcU8PPTgwHaFa?w=248&h=180&c=7&r=0&o=7&cb=12&dpr=1.7&pid=1.7&rm=3" alt="Snelleen Taxi Logo" className="w-8 h-auto sm:w-10" />
+            <img src="https://th.bing.com/th/id/OIP.BxU1qqkhT1dsYNjDsOKc9wHaHa?w=186&h=186&c=7&r=0&o=7&cb=12&dpr=1.7&pid=1.7&rm=3" alt="Snelleen Taxi Logo" className="w-8 h-auto sm:w-10" />
           </div>
         </Link>
 

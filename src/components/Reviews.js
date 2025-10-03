@@ -75,7 +75,7 @@ function Reviews() {
               </h3>
 
               {/* Review Text */}
-              <p className="text-gray-700 text-xs sm:text-sm italic text-center mb-4 sm:mb-5 flex-grow leading-relaxed">
+              <p className="text-gray-700 text-xs sm:text-sm italic  text-justify mb-4 sm:mb-5 flex-grow leading-relaxed">
                 "{review.text}"
               </p>
 
