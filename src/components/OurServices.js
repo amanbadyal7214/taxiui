@@ -50,7 +50,7 @@ function OurServices() {
     <div className="py-8 sm:py-10 md:py-12 px-4 bg-white">
       <div className="max-w-7xl mx-auto">
         {/* Section Title */}
-        <h2 className="text-2xl sm:text-3xl md:text-4xl font-bold text-purple-800 mb-6 sm:mb-8">
+        <h2 className="text-2xl sm:text-3xl md:text-4xl font-bold text-gray-900 mb-6 sm:mb-8">
           Our services
         </h2>
 
@@ -72,7 +72,7 @@ function OurServices() {
 
               {/* Service Content */}
               <div className="p-4 sm:p-5">
-                <h3 className="text-lg sm:text-xl font-bold text-purple-800 mb-2 sm:mb-3">
+                <h3 className="text-lg sm:text-xl font-bold text-gray-900 mb-2 sm:mb-3">
                   {service.title}
                 </h3>
                 <p className="text-gray-600 text-xs sm:text-sm mb-3 sm:mb-4 leading-relaxed">
@@ -80,7 +80,7 @@ function OurServices() {
                 </p>
                 <a 
                   href="#" 
-                  className="inline-flex items-center text-purple-700 font-medium text-xs sm:text-sm hover:text-purple-900 transition-colors"
+                  className="inline-flex items-center text-gray-900 font-medium text-xs sm:text-sm hover:text-purple-900 transition-colors"
                 >
                   <span className="mr-1 text-base sm:text-lg">›</span>
                   {service.link}

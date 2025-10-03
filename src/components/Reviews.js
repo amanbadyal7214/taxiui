@@ -49,14 +49,14 @@ function Reviews() {
       <div className="max-w-6xl mx-auto">
         {/* Section Header */}
         <div className="flex flex-col sm:flex-row justify-between items-start sm:items-center mb-6 sm:mb-8 gap-3">
-          <h2 className="text-xl sm:text-2xl md:text-3xl font-bold text-purple-800">
+          <h2 className="text-xl sm:text-2xl md:text-3xl font-bold text-gray-900">
             Our reviews
           </h2>
           <a 
             href="https://kiyoh.nl" 
             target="_blank" 
             rel="noopener noreferrer"
-            className="text-purple-800 text-xs sm:text-sm font-medium hover:underline"
+            className="text-gray-900 text-xs sm:text-sm font-medium hover:underline"
           >
             See all reviews on <span className="underline">Kiyoh.nl</span>
           </a>
@@ -70,7 +70,7 @@ function Reviews() {
               className="bg-white rounded-lg sm:rounded-xl p-4 sm:p-5 md:p-6 shadow-lg hover:shadow-xl transition-shadow duration-300 flex flex-col min-h-[400px] sm:min-h-[450px] md:min-h-[500px]"
             >
               {/* Title */}
-              <h3 className="text-lg sm:text-xl font-bold text-purple-700 mb-2 sm:mb-3 text-center">
+              <h3 className="text-lg sm:text-xl font-bold text-gray-900 mb-2 sm:mb-3 text-center">
                 {review.title}
               </h3>
 
@@ -81,7 +81,7 @@ function Reviews() {
 
               {/* Rating Number and Stars in one line */}
               <div className="flex items-center justify-center gap-2 sm:gap-3 mb-3 sm:mb-4">
-                <span className="text-2xl sm:text-3xl font-bold text-purple-700">
+                <span className="text-2xl sm:text-3xl font-bold text-gray-900">
                   {review.rating}
                 </span>
                 <div className="flex gap-0.5 sm:gap-1">
@@ -91,7 +91,7 @@ function Reviews() {
 
               {/* Author Info */}
               <div className="text-center border-t pt-2 sm:pt-3">
-                <p className="text-sm sm:text-base font-semibold text-purple-700 mb-1">
+                <p className="text-sm sm:text-base font-semibold text-gray-900 mb-1">
                   {review.author}
                 </p>
                 <p className="text-gray-600 text-xs">
