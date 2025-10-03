@@ -11,7 +11,7 @@ const Footer = () => {
         <div className="flex items-start justify-center sm:justify-start">
           <div className="bg-yellow-400 p-3 sm:p-4 rounded-xl shadow-md hover:shadow-lg transition-all duration-300">
             <img 
-              src="/download.webp" 
+              src="https://th.bing.com/th/id/OIP.M_lte6VffTvK_QcU8PPTgwHaFa?w=248&h=180&c=7&r=0&o=7&cb=12&dpr=1.7&pid=1.7&rm=3" 
               alt="Snelleen Taxi Logo" 
               className="w-20 sm:w-24 h-auto"
             />
