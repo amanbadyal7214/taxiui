@@ -35,7 +35,7 @@ function Reviews() {
     return Array(5).fill(0).map((_, index) => (
       <svg
         key={index}
-        className={`w-5 h-5 ${index < count ? 'text-yellow-400' : 'text-gray-300'}`}
+        className={`w-5 h-5 ${index < count ? 'text-gray-400' : 'text-gray-300'}`}
         fill="currentColor"
         viewBox="0 0 20 20"
       >
@@ -45,7 +45,7 @@ function Reviews() {
   };
 
   return (
-    <div className="py-8 sm:py-10 px-4 bg-gradient-to-b from-yellow-300 to-yellow-400">
+    <div className="py-8 sm:py-10 px-4 bg-gradient-to-b from-gray-300 to-gray-400">
       <div className="max-w-6xl mx-auto">
         {/* Section Header */}
         <div className="flex flex-col sm:flex-row justify-between items-start sm:items-center mb-6 sm:mb-8 gap-3">

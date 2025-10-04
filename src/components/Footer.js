@@ -9,9 +9,9 @@ const Footer = () => {
 
         {/* Logo Section */}
         <div className="flex items-start justify-center sm:justify-start">
-          <div className="bg-yellow-400 p-3 sm:p-4 rounded-xl shadow-md hover:shadow-lg transition-all duration-300">
+          <div className=" p-3 sm:p-4 rounded-xl shadow-md hover:shadow-lg transition-all duration-300">
             <img 
-              src="https://th.bing.com/th/id/OIP.BxU1qqkhT1dsYNjDsOKc9wHaHa?w=186&h=186&c=7&r=0&o=7&cb=12&dpr=1.7&pid=1.7&rm=3" 
+              src="https://th.bing.com/th/id/OIP.a-D-3UjMEi6BtYM4QhOzVAHaHa?w=172&h=180&c=7&r=0&o=7&cb=12&dpr=1.7&pid=1.7&rm=3" 
               alt="Snelleen Taxi Logo" 
               className="w-20 sm:w-24 h-auto"
             />

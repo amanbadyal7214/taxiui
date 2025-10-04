@@ -22,8 +22,8 @@ function Navbar() {
       <div className="max-w-7xl mx-auto px-4 sm:px-6 md:px-12 lg:px-16 xl:px-20 h-[70px] flex justify-between items-center">
         {/* Logo */}
         <Link to="/" className="flex items-center z-50">
-          <div className="bg-gradient-to-br from-taxi-yellow to-yellow-600 px-3 py-2 rounded-md shadow-md">
-            <img src="https://th.bing.com/th/id/OIP.BxU1qqkhT1dsYNjDsOKc9wHaHa?w=186&h=186&c=7&r=0&o=7&cb=12&dpr=1.7&pid=1.7&rm=3" alt="Snelleen Taxi Logo" className="w-8 h-auto sm:w-10" />
+          <div>
+            <img src="https://th.bing.com/th/id/OIP.a-D-3UjMEi6BtYM4QhOzVAHaHa?w=172&h=180&c=7&r=0&o=7&cb=12&dpr=1.7&pid=1.7&rm=3" alt="Snelleen Taxi Logo" className="w-24 rounded-md shadow-lg h-auto sm:w-10" />
           </div>
         </Link>
 
