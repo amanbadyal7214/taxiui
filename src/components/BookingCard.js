@@ -5,8 +5,8 @@ function BookingCard() {
   const [stopovers, setStopovers] = useState([]);
   const [passengers, setPassengers] = useState(1);
   const [vehicleType, setVehicleType] = useState("Sedan (1-4)");
-  const [acType, setAcType] = useState("AC"); // AC / Non-AC
-  const [manualVehicle, setManualVehicle] = useState(false); // manual override
+  const [acType, setAcType] = useState("AC");
+  const [manualVehicle, setManualVehicle] = useState(false);
   const [bgIndex, setBgIndex] = useState(0);
 
   const pickupDateRef = useRef(null);
@@ -69,14 +69,10 @@ function BookingCard() {
     const selected = e.target.value;
     const required = getVehicleByPassengers(passengers);
     const vehicles = ["Sedan (1-4)", "SUV (1-6)", "Minibus (1-8)", "Luxury"];
-
     if (vehicles.indexOf(selected) < vehicles.indexOf(required)) {
-      alert(
-        `You cannot select a smaller vehicle for ${passengers} passengers.`
-      );
+      alert(`You cannot select a smaller vehicle for ${passengers} passengers.`);
       return;
     }
-
     setVehicleType(selected);
     setManualVehicle(true);
   };
@@ -100,9 +96,7 @@ function BookingCard() {
 
       <div className="relative z-10 w-full pt-24 pb-12 max-w-4xl">
         <div className="text-center mb-4 text-white drop-shadow-lg">
-          <h1 className="text-xl sm:text-2xl font-bold mb-1">
-            Premium Taxi Booking
-          </h1>
+          <h1 className="text-xl sm:text-2xl font-bold mb-1">Premium Taxi Booking</h1>
           <p className="text-sm max-w-md mx-auto">
             Simple, reliable, and luxurious ride booking for every journey
           </p>
@@ -118,16 +112,12 @@ function BookingCard() {
             {/* Passengers, Vehicle, Condition dropdown */}
             <div className="bg-white rounded-md border border-gray-200 shadow-sm mb-4">
               <div className="border-b border-gray-200 px-3 py-2">
-                <h3 className="text-sm font-semibold text-gray-900">
-                  Passengers & Vehicle
-                </h3>
+                <h3 className="text-sm font-semibold text-gray-900">Passengers & Vehicle</h3>
               </div>
-              <div className="p-3 flex gap-4">
-                {/* Passengers 50% */}
-                <div className="flex-[0_0_49%]">
-                  <label className="block text-xs text-gray-500 mb-1">
-                    Passengers
-                  </label>
+              <div className="p-3 flex flex-wrap gap-4">
+                {/* Passengers */}
+                <div className="flex-1 min-w-[120px]">
+                  <label className="block text-xs text-gray-500 mb-1">Passengers</label>
                   <div className="flex items-center gap-2 bg-gray-100 rounded-md p-1 pl-2">
                     <button
                       onClick={decrementPassengers}
@@ -153,11 +143,9 @@ function BookingCard() {
                   </div>
                 </div>
 
-                {/* Vehicle Type 25% */}
-                <div className="flex-[0_0_25%]">
-                  <label className="block text-xs text-gray-500 mb-1">
-                    Vehicle
-                  </label>
+                {/* Vehicle Type */}
+                <div className="flex-1 min-w-[100px]">
+                  <label className="block text-xs text-gray-500 mb-1">Vehicle</label>
                   <select
                     value={vehicleType}
                     onChange={handleVehicleChange}
@@ -170,11 +158,9 @@ function BookingCard() {
                   </select>
                 </div>
 
-                {/* Condition dropdown 25% */}
-                <div className="flex-[0_0_20%]">
-                  <label className="block text-xs text-gray-500 mb-1">
-                    Vehicle Type
-                  </label>
+                {/* AC / Non-AC */}
+                <div className="flex-1 min-w-[100px]">
+                  <label className="block text-xs text-gray-500 mb-1">Vehicle Type</label>
                   <select
                     value={acType}
                     onChange={(e) => setAcType(e.target.value)}
@@ -189,17 +175,14 @@ function BookingCard() {
 
             {/* Journey & Schedule */}
             <div className="grid grid-cols-1 lg:grid-cols-2 gap-4">
+              {/* Journey */}
               <div className="bg-white rounded-md border border-gray-200 shadow-sm">
                 <div className="border-b border-gray-200 px-3 py-2">
-                  <h3 className="text-sm font-semibold text-gray-900">
-                    Journey
-                  </h3>
+                  <h3 className="text-sm font-semibold text-gray-900">Journey</h3>
                 </div>
                 <div className="p-3 space-y-3">
                   <div>
-                    <label className="block text-xs text-gray-500 mb-1">
-                      Pickup
-                    </label>
+                    <label className="block text-xs text-gray-500 mb-1">Pickup</label>
                     <input
                       type="text"
                       placeholder="Pickup address"
@@ -209,14 +192,12 @@ function BookingCard() {
 
                   {stopovers.map((stopover, index) => (
                     <div key={stopover.id}>
-                      <label className="block text-xs text-gray-500 mb-1">
-                        Stop {index + 1}
-                      </label>
-                      <div className="flex gap-2">
+                      <label className="block text-xs text-gray-500 mb-1">Stop {index + 1}</label>
+                      <div className="flex gap-2 flex-wrap">
                         <input
                           type="text"
                           placeholder="Intermediate stop"
-                          className="flex-1 px-2 py-2 text-sm border border-gray-300 rounded-md"
+                          className="flex-1 px-2 py-2 text-sm border border-gray-300 rounded-md min-w-[120px]"
                         />
                         <button
                           type="button"
@@ -237,9 +218,7 @@ function BookingCard() {
                   </button>
 
                   <div>
-                    <label className="block text-xs text-gray-500 mb-1">
-                      Destination
-                    </label>
+                    <label className="block text-xs text-gray-500 mb-1">Destination</label>
                     <input
                       type="text"
                       placeholder="Destination address"
@@ -252,17 +231,12 @@ function BookingCard() {
               {/* Schedule */}
               <div className="bg-white rounded-md border border-gray-200 shadow-sm">
                 <div className="border-b border-gray-200 px-3 py-2">
-                  <h3 className="text-sm font-semibold text-gray-900">
-                    Schedule
-                  </h3>
+                  <h3 className="text-sm font-semibold text-gray-900">Schedule</h3>
                 </div>
                 <div className="p-3 space-y-2">
-                  {/* Pickup Date & Time in one line */}
-                  <div className="flex gap-2">
+                  <div className="flex flex-col sm:flex-row gap-2">
                     <div className="flex-1">
-                      <label className="block text-xs text-gray-500 mb-1">
-                        Pickup Date
-                      </label>
+                      <label className="block text-xs text-gray-500 mb-1">Pickup Date</label>
                       <input
                         ref={pickupDateRef}
                         type="date"
@@ -270,9 +244,7 @@ function BookingCard() {
                       />
                     </div>
                     <div className="flex-1">
-                      <label className="block text-xs text-gray-500 mb-1">
-                        Pickup Time
-                      </label>
+                      <label className="block text-xs text-gray-500 mb-1">Pickup Time</label>
                       <input
                         ref={pickupTimeRef}
                         type="time"
@@ -292,11 +264,9 @@ function BookingCard() {
                   </div>
 
                   {isReturn && (
-                    <div className="flex gap-2">
+                    <div className="flex flex-col sm:flex-row gap-2">
                       <div className="flex-1">
-                        <label className="block text-xs text-gray-500 mb-1">
-                          Return Date
-                        </label>
+                        <label className="block text-xs text-gray-500 mb-1">Return Date</label>
                         <input
                           ref={returnDateRef}
                           type="date"
@@ -304,9 +274,7 @@ function BookingCard() {
                         />
                       </div>
                       <div className="flex-1">
-                        <label className="block text-xs text-gray-500 mb-1">
-                          Return Time
-                        </label>
+                        <label className="block text-xs text-gray-500 mb-1">Return Time</label>
                         <input
                           ref={returnTimeRef}
                           type="time"
@@ -317,28 +285,15 @@ function BookingCard() {
                   )}
 
                   <div>
-                    <label className="block text-xs text-gray-500 mb-1">
-                      Luggage
-                    </label>
+                    <label className="block text-xs text-gray-500 mb-1">Luggage</label>
                     <div className="space-y-1">
                       <label className="flex items-center gap-2 p-1 bg-gray-100 rounded-md cursor-pointer">
-                        <input
-                          type="radio"
-                          name="luggage"
-                          defaultChecked
-                          className="w-4 h-4 accent-gray-900"
-                        />
+                        <input type="radio" name="luggage" defaultChecked className="w-4 h-4 accent-gray-900" />
                         <span className="text-xs text-gray-900">Standard</span>
                       </label>
                       <label className="flex items-center gap-2 p-1 bg-gray-100 rounded-md cursor-pointer">
-                        <input
-                          type="radio"
-                          name="luggage"
-                          className="w-4 h-4 accent-gray-900"
-                        />
-                        <span className="text-xs text-gray-900">
-                          No Luggage
-                        </span>
+                        <input type="radio" name="luggage" className="w-4 h-4 accent-gray-900" />
+                        <span className="text-xs text-gray-900">No Luggage</span>
                       </label>
                     </div>
                   </div>

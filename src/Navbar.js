@@ -22,12 +22,14 @@ function Navbar() {
       <div className="max-w-7xl mx-auto px-4 sm:px-6 md:px-12 lg:px-16 xl:px-20 h-[70px] flex justify-between items-center">
         {/* Logo */}
         <Link to="/" className="flex items-center z-50">
-          <div>
-            <img src="https://th.bing.com/th/id/OIP.a-D-3UjMEi6BtYM4QhOzVAHaHa?w=172&h=180&c=7&r=0&o=7&cb=12&dpr=1.7&pid=1.7&rm=3" alt="Snelleen Taxi Logo" className="w-24 rounded-md shadow-lg h-auto sm:w-10" />
-          </div>
+          <img
+            src="https://th.bing.com/th/id/OIP.a-D-3UjMEi6BtYM4QhOzVAHaHa?w=172&h=180&c=7&r=0&o=7&cb=12&dpr=1.7&pid=1.7&rm=3"
+            alt="Snelleen Taxi Logo"
+            className="h-10 sm:h-12 md:h-14 lg:h-16 w-auto rounded-md shadow-lg"
+          />
         </Link>
 
-        {/* Hamburger Menu Button */}
+        {/* Hamburger Menu */}
         <button
           onClick={() => setMobileMenuOpen(!mobileMenuOpen)}
           className={`md:hidden z-50 p-2 rounded-md transition-colors ${
@@ -53,55 +55,43 @@ function Navbar() {
         </button>
 
         {/* Desktop Menu */}
-        <div className="hidden md:flex items-center">
-          <ul className="flex items-center gap-4 lg:gap-8">
-            <li>
-              <Link
-                to="/download"
-                className={`text-sm font-normal hover:opacity-80 transition-opacity ${
-                  scrolled ? 'text-gray-900' : 'text-white'
-                }`}
-              >
-                Download our app
-              </Link>
-            </li>
-            <li>
-              <Link
-                to="/companies"
-                className={`text-sm font-normal hover:opacity-80 transition-opacity ${
-                  scrolled ? 'text-gray-900' : 'text-white'
-                }`}
-              >
-                Taxi companies
-              </Link>
-            </li>
-            <li>
-              <Link
-                to="/contact"
-                className={`text-sm font-normal hover:opacity-80 transition-opacity ${
-                  scrolled ? 'text-gray-900' : 'text-white'
-                }`}
-              >
-                Contact
-              </Link>
-            </li>
-            <li>
-              <a href="#language" className="text-2xl">
-                🇳🇱
-              </a>
-            </li>
-            <li>
-              <button
-                className={`px-5 lg:px-7 py-2.5 rounded-full text-sm font-semibold shadow-md hover:shadow-lg hover:-translate-y-0.5 transition-all active:translate-y-0 ${
-                  scrolled
-                    ? 'bg-taxi-purple text-gray-900 hover:bg-purple-700'
-                    : 'bg-white text-taxi-purple hover:bg-gray-50'
-                }`}
-              >
-                Log in
-              </button>
-            </li>
-          </ul>
+        <div className="hidden md:flex items-center space-x-4 lg:space-x-6">
+          <Link
+            to="/download"
+            className={`text-sm font-normal hover:opacity-80 transition-opacity ${
+              scrolled ? 'text-gray-900' : 'text-white'
+            }`}
+          >
+            Download our app
+          </Link>
+          <Link
+            to="/companies"
+            className={`text-sm font-normal hover:opacity-80 transition-opacity ${
+              scrolled ? 'text-gray-900' : 'text-white'
+            }`}
+          >
+            Taxi companies
+          </Link>
+          <Link
+            to="/contact"
+            className={`text-sm font-normal hover:opacity-80 transition-opacity ${
+              scrolled ? 'text-gray-900' : 'text-white'
+            }`}
+          >
+            Contact
+          </Link>
+          <a href="#language" className="text-2xl">
+            🇳🇱
+          </a>
+          <button
+            className={`px-4 sm:px-5 lg:px-6 py-2 rounded-full text-sm font-semibold shadow-md hover:shadow-lg hover:-translate-y-0.5 transition-all active:translate-y-0 ${
+              scrolled
+                ? 'bg-taxi-purple text-gray-900 hover:bg-purple-700'
+                : 'bg-white text-taxi-purple hover:bg-gray-50'
+            }`}
+          >
+            Log in
+          </button>
         </div>
 
         {/* Mobile Menu */}
