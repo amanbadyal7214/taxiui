@@ -114,63 +114,65 @@ function BookingCard() {
               <div className="border-b border-gray-200 px-3 py-2">
                 <h3 className="text-sm font-semibold text-gray-900">Passengers & Vehicle</h3>
               </div>
-              <div className="p-3 flex flex-wrap gap-4">
-                {/* Passengers */}
-                <div className="flex-1 min-w-[120px]">
-                  <label className="block text-xs text-gray-500 mb-1">Passengers</label>
-                  <div className="flex items-center gap-2 bg-gray-100 rounded-md p-1 pl-2">
-                    <button
-                      onClick={decrementPassengers}
-                      className="w-8 h-8 flex items-center justify-center text-base bg-white hover:bg-gray-200 border border-gray-300 rounded-md shadow-sm"
-                    >
-                      −
-                    </button>
-                    <input
-                      type="number"
-                      value={passengers}
-                      min={1}
-                      max={16}
-                      onChange={handlePassengerInput}
-                      onBlur={handlePassengerBlur}
-                      className="w-14 text-center text-base font-semibold text-gray-900 bg-white border border-gray-300 rounded-md"
-                    />
-                    <button
-                      onClick={incrementPassengers}
-                      className="w-8 h-8 flex items-center justify-center text-base bg-white hover:bg-gray-200 border border-gray-300 rounded-md shadow-sm"
-                    >
-                      +
-                    </button>
-                  </div>
-                </div>
+              {/* Passengers, Vehicle, AC */}
+<div className="p-3 flex flex-wrap gap-4">
+  {/* Passengers 50% */}
+  <div className="w-full sm:w-[49%]">
+    <label className="block text-xs text-gray-500 mb-1">Passengers</label>
+    <div className="flex items-center gap-2 bg-gray-100 rounded-md p-1 pl-2">
+      <button
+        onClick={decrementPassengers}
+        className="w-8 h-8 flex items-center justify-center text-base bg-white hover:bg-gray-200 border border-gray-300 rounded-md shadow-sm"
+      >
+        −
+      </button>
+      <input
+        type="number"
+        value={passengers}
+        min={1}
+        max={16}
+        onChange={handlePassengerInput}
+        onBlur={handlePassengerBlur}
+        className="w-14 text-center text-base font-semibold text-gray-900 bg-white border border-gray-300 rounded-md"
+      />
+      <button
+        onClick={incrementPassengers}
+        className="w-8 h-8 flex items-center justify-center text-base bg-white hover:bg-gray-200 border border-gray-300 rounded-md shadow-sm"
+      >
+        +
+      </button>
+    </div>
+  </div>
 
-                {/* Vehicle Type */}
-                <div className="flex-1 min-w-[100px]">
-                  <label className="block text-xs text-gray-500 mb-1">Vehicle</label>
-                  <select
-                    value={vehicleType}
-                    onChange={handleVehicleChange}
-                    className="w-full px-2 py-2 text-sm bg-white border border-gray-300 rounded-md focus:border-gray-900 focus:ring-1 focus:ring-gray-800/20"
-                  >
-                    <option>Sedan (1-4)</option>
-                    <option>SUV (1-6)</option>
-                    <option>Minibus (1-8)</option>
-                    <option>Luxury</option>
-                  </select>
-                </div>
+  {/* Vehicle 25% */}
+  <div className="w-full sm:w-[23%]">
+    <label className="block text-xs text-gray-500 mb-1">Vehicle</label>
+    <select
+      value={vehicleType}
+      onChange={handleVehicleChange}
+      className="w-full px-2 py-2 text-sm bg-white border border-gray-300 rounded-md focus:border-gray-900 focus:ring-1 focus:ring-gray-800/20"
+    >
+      <option>Sedan (1-4)</option>
+      <option>SUV (1-6)</option>
+      <option>Minibus (1-8)</option>
+      <option>Luxury</option>
+    </select>
+  </div>
 
-                {/* AC / Non-AC */}
-                <div className="flex-1 min-w-[100px]">
-                  <label className="block text-xs text-gray-500 mb-1">Vehicle Type</label>
-                  <select
-                    value={acType}
-                    onChange={(e) => setAcType(e.target.value)}
-                    className="w-full px-2 py-2 text-sm bg-white border border-gray-300 rounded-md focus:border-gray-900 focus:ring-1 focus:ring-gray-800/20"
-                  >
-                    <option value="AC">AC</option>
-                    <option value="Non-AC">Non-AC</option>
-                  </select>
-                </div>
-              </div>
+  {/* AC / Non-AC 25% */}
+  <div className="w-full sm:w-[23%]">
+    <label className="block text-xs text-gray-500 mb-1">Vehicle Type</label>
+    <select
+      value={acType}
+      onChange={(e) => setAcType(e.target.value)}
+      className="w-full px-2 py-2 text-sm bg-white border border-gray-300 rounded-md focus:border-gray-900 focus:ring-1 focus:ring-gray-800/20"
+    >
+      <option value="AC">AC</option>
+      <option value="Non-AC">Non-AC</option>
+    </select>
+  </div>
+</div>
+
             </div>
 
             {/* Journey & Schedule */}
